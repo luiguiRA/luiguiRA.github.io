@@ -15,10 +15,13 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use(bodyParser.json());
 
 // Conexión a MongoDB
-mongoose.connect('mongodb://localhost:27017/usuariosDB', { useNewUrlParser: true, useUnifiedTopology: true })
-    .then(() => console.log("Conectado a MongoDB"))
-    .catch(err => console.log("Error de conexión a MongoDB", err));
 
+    mongoose.connect('mongodb+srv://jgasfdvassm:<db_password>@mi-cluster-web.w00z5.mongodb.net/?retryWrites=true&w=majority&appName=mi-cluster-web', {
+        useNewUrlParser: true,
+        useUnifiedTopology: true
+    })
+    .then(() => console.log("Conectado a MongoDB Atlas"))
+    .catch(err => console.log("Error de conexión a MongoDB Atlas", err));
 // Ruta principal
 app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, 'public', 'index.html'));
