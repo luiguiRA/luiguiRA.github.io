@@ -21,7 +21,7 @@ mongoose.connect('mongodb://localhost:27017/usuariosDB', { useNewUrlParser: true
 
 // Ruta principal
 app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, 'public', 'login.html'));
+    res.sendFile(path.join(__dirname, 'public', 'index.html'));
 });
 
 // Ruta para manejar el registro de usuarios
@@ -66,7 +66,7 @@ app.post('/login', async (req, res) => {
             return res.status(401).json({ error: 'Contraseña incorrecta' });
         }
 
-        res.status(200).json({ message: 'Inicio de sesión exitoso', redirectTo: '/indexx.html' });
+        res.status(200).json({ message: 'Inicio de sesión exitoso', redirectTo: '/inicio.html' });
     } catch (err) {
         console.error('Error al iniciar sesión:', err);
         res.status(500).json({ error: 'Error interno del servidor' });
