@@ -2,7 +2,7 @@ const express = require('express');
 const path = require('path');
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
-const bcrypt = require('bcrypt'); // Importar bcrypt para encriptar contraseñas
+const bcrypt = require('bcrypt');
 const Usuario = require('./models/usuario'); // Importar el modelo de usuario
 
 const app = express();
@@ -14,14 +14,14 @@ app.use(express.static(path.join(__dirname, 'public')));
 // Middleware para parsear el cuerpo de las peticiones POST (especialmente para JSON)
 app.use(bodyParser.json());
 
-// Conexión a MongoDB
+// Conexión a MongoDB Atlas (sin usar dotenv)
+mongoose.connect('mongodb+srv://jgasfdvassm:luisAnibal7@mi-cluster-web.w00z5.mongodb.net/usuariosDB?retryWrites=true&w=majority', {
+    useNewUrlParser: true,
+    useUnifiedTopology: true
+})
+.then(() => console.log("Conectado a MongoDB Atlas"))
+.catch(err => console.log("Error de conexión a MongoDB Atlas", err));
 
-    mongoose.connect('mongodb+srv://jgasfdvassm:<db_password>@mi-cluster-web.w00z5.mongodb.net/?retryWrites=true&w=majority&appName=mi-cluster-web', {
-        useNewUrlParser: true,
-        useUnifiedTopology: true
-    })
-    .then(() => console.log("Conectado a MongoDB Atlas"))
-    .catch(err => console.log("Error de conexión a MongoDB Atlas", err));
 // Ruta principal
 app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, 'public', 'index.html'));
