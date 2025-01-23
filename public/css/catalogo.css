@@ -1,0 +1,44 @@
+/* Dentro de tu archivo style.css */
+
+.pdf-viewer {
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 900px;
+}
+
+.pdf-title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.pdf-description {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.btn-download {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+.btn-download:hover {
+    background-color: #0056b3;
+}
+
+.pdf-container iframe {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
