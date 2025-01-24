@@ -4,7 +4,7 @@ body {
 	height: 100%;
 	font-family: "Mulish", sans-serif;
 	-webkit-font-smoothing: antialiased;
-	background: #0b0c2a;
+	background: #6d1c1c;
 }
 
 h1,
@@ -390,7 +390,7 @@ body.modal-open .content {
 -----------------------*/
 
 .header {
-	background: #070720;
+	background: #330505;
 }
 
 .header__logo {
@@ -409,7 +409,7 @@ body.modal-open .content {
 	list-style: none;
 	display: inline-block;
 	position: relative;
-	margin-right: 16px;
+	margin: 8px 16px;
 }
 
 .header__menu ul li.active a {
