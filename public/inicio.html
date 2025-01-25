@@ -28,11 +28,20 @@
     <link rel="stylesheet" href="css/style.css" type="text/css">
 </head>
     
+
 <body>
+    <div id="popupModal" class="popup-modal">
+        <div class="popup-content">
+            <span class="popup-close" onclick="closePopupModal()">&times;</span>
+            <img src="img/restaurante3/promocion1.png" alt="Anuncio Especial" class="popup-image">
+        </div>
+    </div>    
     <!-- Page Preloder -->
     <div id="preloder">
         <div class="loader"></div>
     </div>
+    
+    
 
     <!-- Header Section Begin -->
     <header class="header">
@@ -41,8 +50,7 @@
                 <div class="col-lg-2">
                     <div class="header__logo">
                         <a href="./inicio.html">
-                            <img src="img/logo.png" width="200">
-                            <!-- <h4>Poliportal</h4> -->
+                            <img src="img/logo.png" width="200" alt="Logo">
                         </a>
                     </div>
                 </div>
@@ -51,17 +59,24 @@
                         <nav class="header__menu mobile-menu">
                             <ul>
                                 <li class="active"><a href="./inicio.html">INICIO</a></li>
-                                <li><a href="#" onclick="openLocationModal()">UBICACIÓN</a></li>
                                 <li><a href="./about.html">ACERCA DE NOSOTROS</a></li>
-                                
                             </ul>
                         </nav>
                     </div>
                 </div>
             </div>
-            <div id="mobile-menu-wrap"></div>
+        </div>
+    
+        <!-- Contenedor para la ubicación -->
+        <div class="header__location">
+            <button class="btn-location" onclick="openLocationModal()">Seleccionar Ubicación</button>
+            <p id="user-location" class="location-text">
+                <strong>Ubicación:</strong> <span id="location-status">No seleccionada</span>
+            </p>
+            
         </div>
     </header>
+    
     <div id="locationModal" class="modal">
         <div class="modal-content">
             <span class="close" onclick="closeLocationModal()">&times;</span>
@@ -109,25 +124,76 @@
                         </div>
                     </div>
                 </div>
-                <!-- <div class="hero__items set-bg" data-setbg="img/temas/image4.png">
-                    <div class="row">
-                        <div class="col-lg-6">
-                            <div class="hero__text">
-                                
-                                <h2>Tendencias Tecnológicas EC 2024</h2>
-                                <a href="./catalogo.html"><span>View now</span> <i class="fa fa-angle-right"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                </div> -->
             </div>
         </div>
         <br>
     </section>
-    <!-- Hero Section End -->
 
-   <br>
+    <section class="promociones">
+        <div class="container">
+            <h3>Promociones Especiales</h3>
+            <div class="promo-card">
+                <img src="img/restaurante1/promocion1.png" alt="Promoción Especial">
+                <p>¡20% de descuento en Del Tano Parrilla este fin de semana!</p>
+                <a href="./catalogo1.html"><button>Ver Promoción</button></a>
+            </div>
+            <div class="promo-card">
+                <img src="img/restaurante3/promocion1.png" alt="Promoción Especial">
+                <p>¡Aprovecha el 2x1 en platos de Cangrejo!</p>
+                <a href="./catalogo3.html"><button>Ver Promoción</button></a>
+            </div>
+            
+        </div>
+    </section>
+    
+    <section class="catalogo">
+        <div class="container">
+            <h3>Explora Restaurantes</h3>
+            <div class="row">
+                <div class="col-lg-4">
+                    <div class="restaurant-card">
+                        <img src="img/temas/restaurante1.png" alt="Restaurante 1">
+                        <h4>Del Tano Parrilla</h4>
+                        <p>Especialidad en carnes asadas y parrillas.</p>
+                        <a href="./catalogo1.html>"<button>Reservar</button></a>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="restaurant-card">
+                        <img src="img/temas/restaurante2.png" alt="Restaurante 2">
+                        <h4>Big Burguer</h4>
+                        <p>Las mejores hamburguesas de la ciudad.</p>
+                        <a href="./catalogo2.html"><button>Reservar</button></a>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="restaurant-card">
+                        <img src="img/temas/restaurante3.png" alt="Restaurante 3">
+                        <h4>Cevichería del Mar</h4>
+                        <p>Deliciosos ceviches frescos y más...</p>
+                        <a href="./catalogo3.html"><button>Reservar</button></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
+    <section class="testimonios">
+        <div class="container">
+            <h3>Lo que dicen nuestros clientes</h3>
+            <div class="testimonial">
+                <p>"Gracias a Deliflash, descubrí mi restaurante favorito. ¡Muy fácil de usar!"</p>
+                <span>- Ana López</span>
+            </div>
+            <div class="testimonial">
+                <p>"Encuentro los mejores restaurantes cerca de mi ubicacion"</p>
+                <span>- Maria Perez</span>
+            </div>
+        </div>
+    </section>
+    
+    
+   
 <!-- Footer Section Begin -->
 <footer class="footer">
     <div class="page-up">
@@ -144,7 +210,7 @@
                 <div class="footer__nav">
                     <ul>
                         <li class="active"><a href="./inicio.html">INICIO</a></li>
-                        <li><a href="./catalogo.html">CATEGORIA</a></li>
+                       
                         <li><a href="./about.html">ACERCA DE NOSOTROS</a></li>
                     </ul>
                 </div>

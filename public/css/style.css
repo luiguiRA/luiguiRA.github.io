@@ -79,6 +79,273 @@ ol {
 	margin: 0;
 }
 
+/* anuncion flas */
+/* Modal Overlay */
+.popup-modal {
+    display: none; /* Oculto por defecto */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7); /* Fondo oscuro */
+    z-index: 9999;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Modal Content */
+.popup-content {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    position: relative;
+    max-width: 400px;
+    width: 90%;
+}
+
+.popup-image {
+    width: 100%;
+    border-radius: 10px;
+    display: block;
+}
+
+.popup-close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 1.5rem;
+    color: #333;
+    cursor: pointer;
+    background: none;
+    border: none;
+}
+
+/*
+estilos del body 
+*/
+.catalogo {
+    padding: 50px 0;
+    background-color: #ffffff;
+}
+
+.catalogo h3 {
+    color: #ff6347;
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.restaurant-card {
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    overflow: hidden;
+    text-align: center;
+    background-color: #fff;
+    transition: transform 0.3s, box-shadow 0.3s;
+    margin-bottom: 20px;
+    padding: 15px;
+}
+
+.restaurant-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.restaurant-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-bottom: 1px solid #ddd;
+}
+
+.restaurant-card h4 {
+    font-size: 1.2rem;
+    color: #333;
+    margin: 15px 0;
+}
+
+.restaurant-card p {
+    color: #777;
+    font-size: 0.9rem;
+    margin-bottom: 15px;
+}
+
+.restaurant-card button {
+    background-color: #ff6347;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.restaurant-card button:hover {
+    background-color: #e5533c;
+}
+
+/* Promociones Section */
+.promociones {
+    padding: 50px 0;
+    background-color: #fef7f5;
+    text-align: center;
+}
+
+.promociones h3 {
+    font-size: 2rem;
+    color: #ffffff;
+    margin-bottom: 30px;
+}
+
+.promo-card {
+    display: inline-block;
+    text-align: center;
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 2px dashed #ff6347;
+    border-radius: 10px;
+    background-color: #ffffff;
+}
+
+.promo-card img {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.promo-card p {
+    font-size: 1rem;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.promo-card button {
+    background-color: #ff6347;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.promo-card button:hover {
+    background-color: #e5533c;
+}
+
+/* Testimonios Section */
+.testimonios {
+    padding: 50px 0;
+    background-color: #ffffff;
+    text-align: center;
+}
+
+.testimonios h3 {
+    font-size: 2rem;
+    color: #11066f;
+    margin-bottom: 30px;
+}
+
+.testimonial {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: #f8f9fa;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.testimonial p {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+.testimonial span {
+    font-size: 0.9rem;
+    color: #999;
+}
+
+/* Reviews Section */
+.reviews {
+    padding: 50px 0;
+    background-color: #fef7f5;
+}
+
+.reviews h4 {
+    text-align: center;
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.review {
+    max-width: 600px;
+    margin: 0 auto 20px;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    background-color: #ffffff;
+}
+
+.review p {
+    font-size: 1rem;
+    color: #555;
+}
+
+.review span {
+    font-size: 0.9rem;
+    color: #999;
+    display: block;
+    margin-top: 10px;
+}
+
+textarea {
+    width: 100%;
+    max-width: 600px;
+    height: 100px;
+    margin: 20px auto;
+    display: block;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+textarea:focus {
+    outline: none;
+    border-color: #ff6347;
+}
+
+button {
+    background-color: #ff6347;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #e5533c;
+}
+
+
+section.promociones {
+    background-color: #100ac886; /* Fondo claro */
+}
+section.catalogo {
+    background-color: #fff;
+}
+section.testimonios {
+    background-color: #f0f8ff; /* Fondo con tono azul claro */
+}
 /*---------------------
   Helper CSS
 -----------------------*/
@@ -391,6 +658,7 @@ body.modal-open .content {
 
 .header {
 	background: #330505;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .header__logo {
@@ -494,6 +762,55 @@ body.modal-open .content {
 
 .header__right a:last-child {
 	margin-right: 0;
+}
+.header__location {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 15px; /* Espacio entre el texto de ubicación y el botón */
+    
+	padding-left: 20px;
+}
+.location-text {
+    font-size: 15px;
+	margin-top: 15px;
+    color: #ffffff;
+}
+
+#location-status {
+    font-weight: bold;
+    color: #910d0d; /* Color azul para resaltar la ubicación */
+}
+
+/* Estilo para el botón de selección de ubicación */
+.btn-location {
+    padding: 8px 15px;
+    font-size: 14px;
+    background-color: #0a3d74;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+	display: inline-flex;
+	align-items: center;
+}
+
+/* Efecto hover para el botón */
+.btn-location:hover {
+    background-color: #1879e1;
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+    .header__location {
+        justify-content: center;
+        margin-top: 10px;
+		padding-left: 0;
+    }
+	.btn-location {
+        margin-top: 5px;
+    }
 }
 
 .slicknav_menu {

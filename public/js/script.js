@@ -89,9 +89,22 @@ document.getElementById('login-form').addEventListener('submit', async (e) => {
         showMessage('error', 'Error en la solicitud: ' + err.message);
     }
 });
+//anuncio flash
+// Mostrar el modal al cargar la página
+document.addEventListener('DOMContentLoaded', () => {
+    const popupModal = document.getElementById('popupModal');
+    popupModal.style.display = 'flex'; // Muestra el modal
+});
+
+// Función para cerrar el modal
+function closePopupModal() {
+    const popupModal = document.getElementById('popupModal');
+    popupModal.style.display = 'none'; // Oculta el modal
+}
 
 var map;
 var marker; // El marcador será creado y actualizado solo con la geolocalización.
+var selectedLocation = "No seleccionada"; // Variable para guardar la ubicación confirmada
 
 // Función para abrir el modal de ubicación y obtener la ubicación real
 function openLocationModal() {
@@ -139,15 +152,33 @@ function closeLocationModal() {
     document.getElementById('locationModal').classList.remove('show');
 }
 
-// Función para confirmar la ubicación
+// Función para confirmar la ubicación y convertir las coordenadas en una ciudad
 function confirmLocation() {
     // Verificar si el marcador está definido
     if (marker) {
         var latLng = marker.getLatLng();
-        //alert("Ubicación confirmada: " + latLng.lat + ", " + latLng.lng);
-        alert("UBICACIÓN CONFIRMADA");
-        // Cerrar el modal
-        closeLocationModal();
+
+        // Solicitar a la API de Nominatim la dirección para las coordenadas
+        fetch(`https://nominatim.openstreetmap.org/reverse?lat=${latLng.lat}&lon=${latLng.lng}&format=json`)
+            .then(response => response.json())
+            .then(data => {
+                if (data && data.address) {
+                    // Obtener la ciudad (o el lugar más cercano)
+                    const city = data.address.city || data.address.town || data.address.village || "Ubicación no disponible";
+                    selectedLocation = city; // Guardar la ciudad o ubicación
+                    // Mostrar la ubicación confirmada en el DOM
+                    document.getElementById("user-location").innerHTML = `<strong>Ubicación:</strong> ${selectedLocation}`;
+                    alert("Ubicación confirmada: " + selectedLocation);
+                } else {
+                    alert("No se pudo obtener la dirección.");
+                }
+                // Cerrar el modal
+                closeLocationModal();
+            })
+            .catch(error => {
+                console.error('Error al obtener la dirección:', error);
+                alert("No se pudo obtener la dirección.");
+            });
     } else {
         alert("No se ha seleccionado una ubicación.");
     }
