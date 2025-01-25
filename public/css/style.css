@@ -82,7 +82,7 @@ ol {
 /* anuncion flas */
 /* Modal Overlay */
 .popup-modal {
-    display: none; /* Oculto por defecto */
+    display: flex; /* Oculto por defecto */
     position: fixed;
     top: 0;
     left: 0;
@@ -96,13 +96,13 @@ ol {
 
 /* Modal Content */
 .popup-content {
-    background-color: #ffffff;
+    background-color: #514319;
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
     text-align: center;
     position: relative;
-    max-width: 400px;
+    max-width: 600px;
     width: 90%;
 }
 
@@ -114,13 +114,26 @@ ol {
 
 .popup-close {
     position: absolute;
-    top: 10px;
-    right: 10px;
+    top: -20px; /* Ajusta según sea necesario */
+    right: -20px; /* Ajusta según sea necesario */
     font-size: 1.5rem;
-    color: #333;
+    color: white;
     cursor: pointer;
-    background: none;
+    background-color: #ff4d4f; /* Rojo llamativo */
     border: none;
+    border-radius: 50%; /* Hace que sea un círculo */
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s, background-color 0.2s;
+}
+
+.popup-close:hover {
+    transform: scale(1.2); /* Efecto de aumento */
+    background-color: #d9363e; /* Oscurece al pasar el mouse */
 }
 
 /*
