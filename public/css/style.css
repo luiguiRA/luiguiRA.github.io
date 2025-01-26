@@ -195,7 +195,26 @@ estilos del body
     cursor: pointer;
     transition: background-color 0.3s;
 }
+.availability {
+	display: flex;
+	align-items: center;
+	gap: 18px;
+	margin-top: 10px;
+}
 
+.status-circle {
+	width: 10px;
+	height: 10px;
+	border-radius: 50%;
+}
+
+.available {
+	background-color: green;
+}
+
+.unavailable {
+	background-color: red;
+}
 .restaurant-card button:hover {
     background-color: #e5533c;
 }
@@ -351,7 +370,7 @@ button:hover {
 
 
 section.promociones {
-    background-color: #100ac886; /* Fondo claro */
+    background-color: #b7b7b7; /* Fondo claro */
 }
 section.catalogo {
     background-color: #fff;
