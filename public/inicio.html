@@ -28,15 +28,16 @@
     
 
 <body>
-    <div id="popupModal" class="popup-modal">
-        <div class="popup-content">
-            <span class="popup-close" onclick="closePopupModal()">&times;</span>
-            <img src="img/restaurante3/promocion1.png" alt="Anuncio Especial" class="popup-image">
-        </div>
-    </div>    
+    
     <!-- Page Preloder -->
     <div id="preloder">
         <div class="loader"></div>
+    </div>
+    <div id="popupModal" class="popup-modal">
+        <div class="popup-content">
+            <span class="popup-close" onclick="closePopupModal()">&times;</span>
+            <img id="popupImage" src="img/restaurante3/promocion1.png" alt="Anuncio Especial" class="popup-image">
+        </div>
     </div>
     
     
@@ -153,6 +154,9 @@
                         <img src="img/temas/restaurante1.png" alt="Restaurante 1">
                         <h4>Del Tano Parrilla</h4>
                         <p>Especialidad en carnes asadas y parrillas.</p>
+                        <div class="horario">
+                            ⏰ <strong>Horario:</strong> 12:00 PM - 10:00 PM
+                        </div>
                         <div class="availability">
                             <span class="status-circle available"></span> <span>Disponible</span>
                             <a href="./catalogo1.html"><button>Reservar</button></a>
@@ -164,6 +168,9 @@
                         <img src="img/temas/restaurante2.png" alt="Restaurante 2">
                         <h4>Big Burguer</h4>
                         <p>Las mejores hamburguesas de la ciudad.</p>
+                        <div class="horario">
+                            ⏰ <strong>Horario:</strong> 10:00 AM - 09:00 PM
+                        </div>
                         <div class="availability">
                             <span class="status-circle unavailable"></span> <span>No disponible</span>
                             <a href="./catalogo2.html"><button>Reservar</button></a>
@@ -176,6 +183,9 @@
                         <img src="img/temas/restaurante3.png" alt="Restaurante 3">
                         <h4>Cevichería del Mar</h4>
                         <p>Deliciosos ceviches frescos y más...</p>
+                        <div class="horario">
+                            ⏰ <strong>Horario:</strong> 08:00 AM - 03:00 PM
+                        </div>
                         <div class="availability">
                             <span class="status-circle available"></span> <span>Disponible</span>
                             <a href="./catalogo3.html"><button>Reservar</button></a>
@@ -183,6 +193,7 @@
                     </div>
                 </div>
             </div>
+            <div id="mobile-menu-wrap"></div>
         </div>
     </section>
 
@@ -205,7 +216,9 @@
 <!-- Footer Section Begin -->
 <footer class="footer">
     <div class="page-up">
-        <a href="#" id="scrollToTopButton"><span class="arrow_carrot-up"></span></a>
+        <a href="#" id="scrollToTopButton">
+            <img src="img/icono/FArriba.png" alt="Scroll to top" style="width: 24px; height: 24px;">
+        </a>
     </div>
     <div class="container">
         <div class="row">

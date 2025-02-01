@@ -90,8 +90,23 @@ document.getElementById('login-form').addEventListener('submit', async (e) => {
     }
 });
 //anuncio flash
-// Mostrar el modal al cargar la página
+// para los anuncios
+const anuncios = [
+    "img/restaurante1/promocion1.png",
+    "img/restaurante2/promocion1.png",
+    "img/restaurante3/promocion1.png",
+    "img/restaurante4/promocion1.png"
+];
+
+// Mostrar el modal y cambiar la imagen cuando el DOM esté completamente cargado
 document.addEventListener('DOMContentLoaded', () => {
+    // Cambiar la imagen aleatoriamente
+    const randomIndex = Math.floor(Math.random() * anuncios.length); // Selecciona un índice aleatorio
+    const popupImage = document.getElementById('popupImage');
+    console.log("Cambiando imagen a:", anuncios[randomIndex]);  // Verificar qué imagen se está seleccionando
+    popupImage.src = anuncios[randomIndex]; // Cambia la imagen
+
+    // Mostrar el modal
     const popupModal = document.getElementById('popupModal');
     popupModal.style.display = 'flex'; // Muestra el modal
 });
@@ -183,3 +198,6 @@ function confirmLocation() {
         alert("No se ha seleccionado una ubicación.");
     }
 }
+
+
+

@@ -48,7 +48,7 @@ h4 {
 p {
 	font-size: 15px;
 	font-family: "Mulish", sans-serif;
-	color: #e4e4e4;
+	color: #000000;
 	font-weight: 400;
 	line-height: 25px;
 	margin: 0 0 15px 0;
@@ -58,6 +58,7 @@ img {
 	max-width: 100%;
 	
 }
+
 
 input:focus,
 select:focus,
@@ -96,15 +97,27 @@ ol {
 
 /* Modal Content */
 .popup-content {
-    background-color: #514319;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
-    text-align: center;
+    background: linear-gradient(135deg, #2C3E50, #34495E); /* Gradiente azul grisáceo y oscuro */
+    padding: 15px; /* Más espacio interior */
+    border-radius: 15px; /* Bordes redondeados */
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3); /* Sombra suave para profundidad */
     position: relative;
     max-width: 600px;
     width: 90%;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Animación suave */
 }
+.horario {
+    background-color: #f8f9fa;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: bold;
+    color: #333;
+    display: inline-block;
+    margin-bottom: 10px;
+    border-left: 4px solid #ff9900; /* Color llamativo */
+}
+
 
 .popup-image {
     width: 100%;
